@@ -2,11 +2,22 @@
     <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
         <html>
         <head>
+        
+        
             <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
             <title>Registration</title>
+        
+        
+         <style>
+      		.error {
+         		color: #ff0000;
+     		 }
+		 </style>
+        
         </head>
         <body>
             <form:form id="regForm" modelAttribute="user" action="registerProcess" method="post">
+               <form:errors path = "*" />
                 <table align="center">
                     <tr>
                         <td>
@@ -15,6 +26,7 @@
                         <td>
                             <form:input path="username" name="username" id="username" />
                         </td>
+                        <td><form:errors path = "username" cssClass="error"  /></td>
                     </tr>
                     <tr>
                         <td>
@@ -23,6 +35,7 @@
                         <td>
                             <form:password path="password" name="password" id="password" />
                         </td>
+                         <td><form:errors path = "password" cssClass="error"   /></td>
                     </tr>
                     <tr>
                         <td>
@@ -31,6 +44,7 @@
                         <td>
                             <form:input path="firstname" name="firstname" id="firstname" />
                         </td>
+                         <td><form:errors path = "firstname" cssClass="error"   /></td>
                     </tr>
                     <tr>
                         <td>
@@ -39,6 +53,7 @@
                         <td>
                             <form:input path="lastname" name="lastname" id="lastname" />
                         </td>
+                        <td><form:errors path = "lastname" cssClass="error"   /></td>
                     </tr>
                     <tr>
                         <td>
@@ -47,6 +62,9 @@
                         <td>
                             <form:input path="email" name="email" id="email" />
                         </td>
+                        
+                         <td><form:errors path = "email" cssClass="error"   /></td>
+                        
                     </tr>
                     <tr>
                         <td>

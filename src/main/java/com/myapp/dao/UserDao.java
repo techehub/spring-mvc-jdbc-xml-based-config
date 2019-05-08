@@ -7,4 +7,5 @@ import com.myapp.model.User;
 public interface UserDao {
     void register(User user);
     User validateUser(Login login);
+    User validateUserNameExists(String username);
 }

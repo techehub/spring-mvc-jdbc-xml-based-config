@@ -1,13 +1,35 @@
 package com.myapp.model;
 
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class User {
+
+    @NotEmpty (message="Username required")
+    @Size(min=5, max=10 , message = "Min size 5 max size 10")
     private String username;
+
+    @NotEmpty (message="Password required")
     private String password;
+
+    @NotEmpty (message="Password required")
     private String firstname;
+
+    @NotEmpty (message="Password required")
+
     private String lastname;
+
+    @NotEmpty (message="Password required")
+    @Email(message ="Not valid email")
     private String email;
     private String address;
     private int phone;
+
     public String getUsername() {
         return username;
     }

@@ -43,11 +43,13 @@ public class MyAppConfig  extends WebMvcConfigurerAdapter{
 	        return viewResolver;
 	    }
 	 
+	  /*
 	    @Override
 	    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 	        configurer.enable();
 	    }
-	    
+	  */  
+	
 	    /**
 	    @Bean
 	    public UserService userService() {
