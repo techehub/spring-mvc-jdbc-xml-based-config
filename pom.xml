@@ -25,6 +25,8 @@
   </properties>
 
   <dependencies>
+
+    <!--
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -72,6 +74,8 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>${mysql.connector.version}</version>
     </dependency>
+
+    -->
   </dependencies>
 
   <build>
