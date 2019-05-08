@@ -19,7 +19,10 @@ public class RegistrationController {
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView mav = new ModelAndView("register");
-        mav.addObject("user", new User());
+        User u= new User();
+        u.setFirstname("VIJEESH");
+        u.setLastname("TP");
+        mav.addObject("user", u);
         return mav;
     }
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
